@@ -1,5 +1,5 @@
 {
-  "name": "hello2",
+  "name": "photoMosaic",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,7 +13,9 @@
   },
   "main": "background.js",
   "dependencies": {
+    "compressorjs": "^1.0.6",
     "core-js": "^3.6.5",
+    "electron-image-resize": "^1.2.4",
     "vue": "^2.6.11"
   },
   "devDependencies": {
@@ -40,7 +42,9 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "vue/no-unused-components": "off"
+    }
   },
   "browserslist": [
     "> 1%",

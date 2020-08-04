@@ -1,4 +1,4 @@
-# hello2
+# photoMosaic
 
 ## Project setup
 ```
