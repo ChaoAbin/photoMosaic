@@ -1,18 +1,19 @@
 <template>
   <div id="app">
-    <Compressor />
+    <Compressor :width="100" :mosaicWidth="5" />
+    <MaskPhoto :width="50" />
   </div>
 </template>
 
 <script>
 import Compressor from './components/Compressor.vue'
-import Canvas from './components/Canvas.vue'
+import MaskPhoto from './components/MaskPhoto.vue'
 
 export default {
   name: 'App',
   components: {
     Compressor,
-    Canvas
+    MaskPhoto
   }
 }
 </script>
@@ -22,8 +23,9 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  margin-bottom: 60px;
+  width: 2000px;
 }
 </style>
