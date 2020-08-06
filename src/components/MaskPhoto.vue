@@ -12,7 +12,7 @@
 
 <script>
 import Compressor from 'compressorjs';
-import FileTransform from '../utils/FileTransform'
+import ImageFormat from '../utils/ImageFormat'
 
 /*
 image 各種型態轉換(blob, dataURL, canvas) in JavaScript

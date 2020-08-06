@@ -28,7 +28,7 @@ const dataURLtoFile = function (dataurl, filename) {
  */
 const convertImgToBase64URL = function (url) {
     let img = new Image()
-    let outputFormat = getFileExtensions(url)
+    let outputFormat = getFileTypeByExtensions(url)
     img.crossOrigin = 'Anonymous'
     return new Promise((resolve) => {
         img.onload = function () {
@@ -63,14 +63,25 @@ const blobtoDataURL = function (blob) {
 /**
  * get filename extensions
  * @param  {String} filename
- * @param  {Function} callback
+
  */
 const getFileExtensions = function (filename) {
+    return (/[.]/.exec(filename)) ? /[^.]+$/.exec(filename)[0] : '';
+}
+
+/**
+ * get filename extensions
+ * @param  {String} filename
+ * @param  {Function} callback
+ */
+const getFileTypeByExtensions = function (filename) {
     return (/[.]/.exec(filename)) ? 'image/' + /[^.]+$/.exec(filename) : 'image/*';
 }
 
 module.exports = {
     dataURLtoFile,
     convertImgToBase64URL,
-    blobtoDataURL
+    blobtoDataURL,
+    getFileExtensions,
+    getFileTypeByExtensions
 }

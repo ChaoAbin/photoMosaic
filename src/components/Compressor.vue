@@ -22,7 +22,7 @@
 
 <script>
 import Compressor from 'compressorjs';
-import FileTransform from '../utils/FileTransform'
+import ImageFormat from '../utils/ImageFormat'
 
 /*
 image 各種型態轉換(blob, dataURL, canvas) in JavaScript
@@ -80,16 +80,16 @@ export default {
       return imageList[(Math.floor(Math.random() * Math.floor(13)))]
     },
     exampleCompressor(imgSrc) {
-      FileTransform.convertImgToBase64URL(imgSrc)
+      ImageFormat.convertImgToBase64URL(imgSrc)
       .then((b64) => {
-        let file = FileTransform.dataURLtoFile(b64)
+        let file = ImageFormat.dataURLtoFile(b64)
         return this._compressorImage(file, {
           // quality: 0.1,
           // convertSize: 50000,
           width: this.width
         })
       })
-      .then(FileTransform.blobtoDataURL)
+      .then(ImageFormat.blobtoDataURL)
       .then((b64) => {
         this.drawImage(b64)
       })
