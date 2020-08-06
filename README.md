@@ -4,9 +4,7 @@
 
 希望達成的效果:
 
-![ex1](doc/ex1.jpg = 300x)
-
-![ex2](doc/ex2.jpg = 300x)
+<img src="doc/ex1.jpg" height="300"> <img src="doc/ex2.jpg" height="300">
 
 ## Project setup
 ```
@@ -34,4 +32,5 @@ npm run lint
 ```
 ### Customize configuration
 Vue：See [Configuration Reference](https://cli.vuejs.org/config/).
+
 Electron：See [Docs Reference](https://www.electronjs.org/docs).
